@@ -179,3 +179,11 @@ dependencies = [
     "channels==4.3.2",
     "channels-redis==4.3.0",
 ]
+
+
+[tool.uv]
+required-environments = [
+    "sys_platform == 'linux' and platform_machine == 'x86_64'",
+    # 如果你也需要在 Windows 上运行，可以保留下面这行
+    # "sys_platform == 'win32'"
+]
