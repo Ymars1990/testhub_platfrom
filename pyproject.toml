@@ -179,15 +179,3 @@ dependencies = [
     "channels==4.3.2",
     "channels-redis==4.3.0",
 ]
-
-[tool.uv]
-# 允许解析时忽略 pywin32 的平台限制
-resolution = "highest"
-
-[tool.uv.sources]
-# 如果 pywin32 被某个包需要，允许 uv 跳过它
-pywin32 = { index = "https://pypi.org/simple", optional = true }
-
-# 或者使用 conflict 标记
-[tool.uv.required-environments]
-pywin32 = { marker = "sys_platform == 'win32'" }
