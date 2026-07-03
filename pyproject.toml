@@ -180,10 +180,11 @@ dependencies = [
     "channels-redis==4.3.0",
 ]
 
-
 [tool.uv]
 required-environments = [
-    "sys_platform == 'linux' and platform_machine == 'x86_64'",
-    # 如果你也需要在 Windows 上运行，可以保留下面这行
-    # "sys_platform == 'win32'"
+    "sys_platform == 'linux' and platform_machine == 'x86_64'"
+]
+# 添加下面这段，强制覆盖 mcp 对 pywin32 的依赖
+override-dependencies = [
+    "pywin32>=310; sys_platform == 'never'",
 ]
