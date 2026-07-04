@@ -181,6 +181,7 @@ dependencies = [
 ]
 
 [tool.uv]
+index-url = "https://mirrors.aliyun.com/pypi/simple/"
 required-environments = [
     "sys_platform == 'linux' and platform_machine == 'x86_64'"
 ]
